@@ -4,7 +4,7 @@ import { Container } from "../container/Container";
 
 export const HeroSection = () => {
   return (
-    <section className="pb-10">
+    <section className="pb-20">
       <Container>
         <div className="mt-8 lg:mt-0 lg:min-h-screen w-full flex flex-col lg:flex-row-reverse gap-8">
           <div className="flex items-center justify-center -z-50">

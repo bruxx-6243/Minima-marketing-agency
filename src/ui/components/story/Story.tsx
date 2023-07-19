@@ -10,12 +10,12 @@ import { Skeleton } from "../about/Skeleton";
 
 export const StorySection = () => {
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.4,
     triggerOnce: true,
   });
 
   return (
-    <section className="pb-20">
+    <section id="story" className="pb-20">
       <Container className="flex flex-col md:flex-row-reverse gap-8">
         <div className="flex flex-col justify-center space-y-8">
           <SubTitle>Our success story</SubTitle>

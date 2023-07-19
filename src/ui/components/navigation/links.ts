@@ -6,27 +6,27 @@ type Props = {
 const links: Props[] = [
   {
     title: "Home",
-    href: "/",
+    href: "",
   },
   {
     title: "About us",
-    href: "/about-us",
+    href: "about-us",
   },
   {
     title: "Services",
-    href: "/services",
+    href: "services",
   },
   {
     title: "Story",
-    href: "/story",
+    href: "story",
   },
   {
     title: "Testimonial",
-    href: "/testimonial",
+    href: "testimonial",
   },
   {
     title: "Our Team",
-    href: "/our-team",
+    href: "our-team",
   },
 ];
 

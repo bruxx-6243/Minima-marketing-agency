@@ -6,7 +6,7 @@ import ServiceCards from "./ServiceCards";
 
 export const ServiceSection = () => {
   return (
-    <section className="pb-20">
+    <section id="services" className="pb-20">
       <Container className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-8">
           <SubTitle>Service we provide</SubTitle>

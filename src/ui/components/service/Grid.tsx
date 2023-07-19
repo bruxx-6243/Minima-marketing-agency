@@ -11,14 +11,15 @@ const servicesPics = [service4, service2, service5, service3];
 
 export const GridServices = () => {
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.4,
     triggerOnce: true,
   });
 
   return (
-    <div ref={ref} className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 gap-4">
       {servicesPics.map((service, index) => (
         <div
+          ref={ref}
           key={index}
           className={clsx([
             index === servicesPics.length - 1 && "col-span-2",

@@ -9,7 +9,6 @@ import { Button } from "../../design/button/Button";
 import { Logo } from "./logo/Logo";
 import links from "./links";
 import { NavLink } from "./customLink/NavLink";
-import { Link } from "react-router-dom";
 import { MobileNav } from "./MobileNav";
 import { useVisibility } from "../../../hooks/useVisibility";
 
@@ -38,9 +37,9 @@ export const Navigation = () => {
       >
         <Container className="flex items-center justify-between">
           <div className="flex items-center space-x-6">
-            <Link to="/" className="inline-block">
+            <a href="#" className="inline-block">
               <Logo />
-            </Link>
+            </a>
 
             {/* Desktop navigation */}
             <ul className="hidden lg:flex space-x-4">

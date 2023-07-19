@@ -1,14 +1,13 @@
 import { Logo } from "../../navigation/logo/Logo";
 import { Typography } from "../../../design/typography/Typography";
-import { Link } from "react-router-dom";
 
 export const BlocOne = () => {
   return (
     <>
       <div>
-        <Link to="/">
+        <a href="#">
           <Logo bg="bg-black-white" clr="text-black" />
-        </Link>
+        </a>
         <Typography
           slug="p"
           variant="extra"

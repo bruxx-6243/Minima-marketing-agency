@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import links from "./links";
 import { Button } from "../../design/button/Button";
 
@@ -16,7 +15,7 @@ export const MobileNav = ({ toggleMenu }: Props) => {
             key={(Math.random() * index).toString()}
             className="text-sm"
           >
-            <Link to={link.href}>{link.title}</Link>
+            <a href={`#${link.href}`}>{link.title}</a>
           </li>
         ))}
       </ul>

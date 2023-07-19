@@ -15,7 +15,7 @@ export const StorySection = () => {
   });
 
   return (
-    <section className="py-36">
+    <section className="pb-20">
       <Container className="flex flex-col md:flex-row-reverse gap-8">
         <div className="flex flex-col justify-center space-y-8">
           <SubTitle>Our success story</SubTitle>
@@ -32,7 +32,7 @@ export const StorySection = () => {
             <img
               src={StoryImage}
               alt="Our story of success"
-              className="about-image w-11/12 aspect-auto h-[300px] object-cover"
+              className="about-image w-full md:w-11/12 aspect-auto h-[300px] object-cover"
             />
           )}
         </div>

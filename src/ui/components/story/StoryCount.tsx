@@ -17,7 +17,7 @@ const counts = [
 
 export const StoryCount = () => {
   return (
-    <ul className="flex items-center flex-wrap justify-between gap-4">
+    <ul className="flex items-center justify-between gap-4">
       {counts.map((count) => (
         <li key={count.title}>
           <Counter target={count.number} title={count.title} />

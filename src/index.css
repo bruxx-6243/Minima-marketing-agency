@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  :root {
+    /*--------- Colors -------------*/
+
+    /* Brand colors */
+    --clr-primary: hsl(0, 5%, 4%);
+    --clr-secondary: hsl(54, 96%, 69%);
+
+    /* State Colors */
+    --clr-info: hsl(214, 84%, 56%);
+    --clr-success: hsl(145, 63%, 42%);
+    --clr-warning: hsl(45, 74%, 56%);
+    --clr-error: hsl(0, 79%, 63%);
+
+    /* Black Colors */
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-earie-black: hsl(0, 0%, 11%);
+    --clr-dire-wolf: hsl(0, 0%, 16%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    /* Grey Colors */
+    --clr-carbon: hsl(0, 0%, 20%);
+    --clr-oak: hsl(0, 0%, 31%);
+    --clr-trolley: hsl(0, 0%, 51%);
+    --clr-noghrei: hsl(0, 0%, 74%);
+    --clr-christmas: hsl(0, 0%, 88%);
+
+    /*--------- Typography -------------*/
+
+    /* Heading 1 */
+    --fs-h1: 56px;
+    --lh-h1: 61.6px;
+
+    /* Heading 2 */
+    --fs-h2: 48px;
+    --lh-h2: 52.8px;
+
+    /* Heading 3 */
+    --fs-h3: 40px;
+    --lh-h3: 44px;
+
+    /* Heading 4 */
+    --fs-h4: 32px;
+    --lh-h4: 35.2px;
+
+    /* Heading 5 */
+    --fs-h5: 24px;
+    --lh-h5: 26.4px;
+
+    /* Heading 6 */
+    --fs-h6: 20px;
+    --lh-h6: 22px;
+
+    /* Large */
+    --fs-txt-lg: 20px;
+    --lh-txt-lg: 28px;
+
+    /* Medium */
+    --fs-txt-md: 18px;
+    --lh-txt-md: 25.2px;
+
+    /* Normal */
+    --fs-txt-normal: 16px;
+    --lh-txt-normal: 22.4px;
+
+    /* Small */
+    --fs-txt-sm: 14px;
+    --fs-txt-sm: 19.6px;
+
+    /* extra small */
+    --fs-txt-xs: 12px;
+    --fs-txt-xs: 15.6px;
+  }
+}
+
+@layer base {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Montserrat", sans-serif;
+    @apply bg-black-white;
+  }
+
+  ::selection {
+    @apply bg-state-success text-black-white;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply flex justify-center relative text-md text-black-dire-wolf  duration-200 after:content-[""] after:absolute after:-bottom-1  after:w-0  after:h-0.5 after:rounded-md after:bg-black after:duration-200 after:origin-right;
+  }
+
+  .nav-link:hover {
+    @apply after:w-1/2;
+  }
+
+  .active-link {
+    @apply flex justify-center relative text-md text-black-dire-wolf  duration-200 after:content-[""] after:absolute after:-bottom-1  after:w-1/2  after:h-0.5 after:rounded-md after:bg-black after:duration-200 after:origin-right;
+  }
+
+  .news-letter {
+    @apply text-grey-trolley py-2  rounded-lg placeholder:text-grey-trolley placeholder:text-xs px-4 outline-none;
+  }
+
+  .submit-letter {
+    @apply px-8 py-2 flex items-center justify-center  rounded-lg duration-200 font-semibold bg-brand-secondary text-black cursor-pointer;
+  }
+
+  .msg {
+    @apply opacity-0 transition-opacity duration-500;
+  }
+
+  .info:hover ~ .msg {
+    @apply opacity-100;
+  }
+
+  .active-header {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 32px 0 rgba(31, 38, 135, 0.1);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+    transition: background-color 0.5 ease-in-out, box-shadow 0.5 ease-in-out;
+  }
+
+  .mobile-nav {
+    z-index: 1000;
+    animation: slide-up 0.5s both;
+    -webkit-animation: slide-up 0.5s ease-in-out;
+  }
+
+  @-webkit-keyframes slide-up {
+    0% {
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .about-section {
+    @apply relative flex items-center justify-center  w-full md:w-3/4 h-[300px]  md:h-[400px] before:absolute before:block  before:h-[95%] before:w-1/3 before:-bottom-4 before:-left-4 before:border-4 before:border-brand-secondary;
+  }
+
+  .about-image {
+    @apply opacity-0;
+    animation: img-appear 1s ease-in-out forwards;
+  }
+
+  @keyframes img-appear {
+    to {
+      @apply opacity-100;
+    }
+  }
+}

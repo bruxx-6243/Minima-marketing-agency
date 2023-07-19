@@ -15,7 +15,7 @@ export const BlocOne = () => {
           className="text-grey-christmas md:max-w-xs mt-4"
         >
           Minima is a boutique social media agency offers full-service media
-          solutions
+          solutions.
         </Typography>
       </div>
     </>

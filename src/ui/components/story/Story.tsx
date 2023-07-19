@@ -21,7 +21,7 @@ export const StorySection = () => {
           <SubTitle>Our success story</SubTitle>
           <Typography variant="medium">
             Develop a website by finding a product identity that has value and
-            branding to become a characteristic of a company
+            branding to become a characteristic of a company.
           </Typography>
           <StoryCount />
         </div>
@@ -32,7 +32,7 @@ export const StorySection = () => {
             <img
               src={StoryImage}
               alt="Our story of success"
-              className="about-image w-full md:w-11/12 aspect-auto h-[300px] object-cover"
+              className="about-image w-full md:w-11/12 aspect-auto h-[250px] lg:h-[300px] object-cover"
             />
           )}
         </div>

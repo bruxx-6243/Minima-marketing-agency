@@ -24,12 +24,12 @@ const Counter = ({ target, title, duration = 10 }: Props) => {
       >
         {({ countUpRef }) => (
           <span
-            className="inline-block text-2xl font-bold text-black"
+            className="inline-block text-4xl font-bold text-black"
             ref={countUpRef}
           />
         )}
       </CountUp>
-      <p className={"inline-block text-[11px] font-bold text-grey-trolley"}>
+      <p className={"inline-block text-[12px] font-bold text-grey-trolley"}>
         {title}
       </p>
     </div>
